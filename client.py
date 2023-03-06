@@ -3,8 +3,8 @@ import _thread
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-s.connect(('192.168.0.119', 3030))
-
+s.connect((input('server\'s local ip: '), int(input('startup server\'s port: '))))
+print('\033[32m'+'connected!'+'\033[0m')
 
 def send(connection: socket):
     while True:
